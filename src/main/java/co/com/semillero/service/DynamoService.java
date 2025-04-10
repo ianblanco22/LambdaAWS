@@ -1,6 +1,6 @@
 package co.com.semillero.service;
 
-import co.com.semillero.model.Entity.ClientEntity;
+import co.com.semillero.model.entity.ClientEntity;
 
 public class DynamoService {
 
