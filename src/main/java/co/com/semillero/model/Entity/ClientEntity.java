@@ -1,6 +1,5 @@
-package co.com.semillero.model.Entity;
+package co.com.semillero.model.entity;
 
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDB;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import lombok.Getter;
 import lombok.Setter;

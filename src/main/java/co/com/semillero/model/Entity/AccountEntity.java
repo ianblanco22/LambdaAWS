@@ -1,4 +1,4 @@
-package co.com.semillero.model.Entity;
+package co.com.semillero.model.entity;
 
 import lombok.Getter;
 import lombok.Setter;
