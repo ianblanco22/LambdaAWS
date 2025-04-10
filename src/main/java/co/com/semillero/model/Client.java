@@ -1,7 +1,5 @@
 package co.com.semillero.model;
 
-import co.com.semillero.model.Entity.AccountEntity;
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import lombok.Getter;
 import lombok.Setter;
 
