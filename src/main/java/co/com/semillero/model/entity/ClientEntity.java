@@ -2,6 +2,8 @@ package co.com.semillero.model.entity;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBDocument;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBRangeKey;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,6 +11,12 @@ import lombok.Setter;
 @Setter
 @DynamoDBDocument
 public class ClientEntity {
+
+    @DynamoDBRangeKey(attributeName = "id")
+    protected String id;
+
+    @DynamoDBHashKey(attributeName = "sdk")
+    protected String sdk;
 
     @DynamoDBAttribute(attributeName = "strIdLlave")
     protected KeyEntity strIdLlave;
