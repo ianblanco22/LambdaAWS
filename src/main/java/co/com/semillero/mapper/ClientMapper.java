@@ -24,6 +24,10 @@ public class ClientMapper {
         clientEntity.setStrFirstName(client.getStrFirstName());
         clientEntity.setStrLastName(client.getStrLastName());
         clientEntity.setStrEmail(client.getStrEmail());
+        clientEntity.setStrPhoneNumber(client.getStrPhoneNumber());
+        clientEntity.setStrIdentificationType(client.getStrIdentificationType());
+        clientEntity.setStrIdentificationNum(client.getStrIdentificationNum());
+        clientEntity.setStrAddress(clientEntity.getStrAddress());
 
         clientEntity.setAccount(accountEntity);
         clientEntity.setKey(keyEntity);
