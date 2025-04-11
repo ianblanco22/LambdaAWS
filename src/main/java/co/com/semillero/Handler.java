@@ -40,6 +40,8 @@ public class Handler implements RequestHandler<APIGatewayProxyRequestEvent, APIG
                 } else if (input.getHeaders().get("servicio").equals("consultar") && input.getHttpMethod().equals(HttpMethod.GET)){
                     Client client = (Client) Util.string2object(input.getBody(), Client.class);
                     return service.getClient(dynamoDBMapper, client);
+                } else if (input.getHeaders().get("servicio").equals("consultarAPI")) {
+
                 } else {
                     throw new Exception("Servicio no disponible");
                 }
