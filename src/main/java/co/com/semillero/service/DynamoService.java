@@ -1,5 +1,6 @@
 package co.com.semillero.service;
 
+import co.com.semillero.exception.ErrorResponse;
 import co.com.semillero.mapper.ClientMapper;
 import co.com.semillero.model.Client;
 import co.com.semillero.model.entity.ClientEntity;
@@ -11,7 +12,7 @@ public class DynamoService implements IDynamoService{
     DynamoMapperRepository dynamoMapperRepository = new DynamoMapperRepository();
     ClientMapper clientMapper = new ClientMapper();
     @Override
-    public String saveClient(DynamoDBMapper mapper, Client entity) {
+    public String saveClient(DynamoDBMapper mapper, Client entity) throws ErrorResponse {
         ClientEntity client = clientMapper.clientMapper(entity);
         dynamoMapperRepository.save(mapper, client);
         return "Se guardó correctamente. ";

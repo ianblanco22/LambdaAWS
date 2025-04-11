@@ -52,6 +52,8 @@ public class Handler implements RequestHandler<APIGatewayProxyRequestEvent, APIG
 
         } catch (Exception e) {
             return e;
+        } catch (ErrorResponse e) {
+            throw new RuntimeException(e);
         }
     }
 }

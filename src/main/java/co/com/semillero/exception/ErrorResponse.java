@@ -3,7 +3,7 @@ package co.com.semillero.exception;
 import co.com.semillero.util.Util;
 
 // Clase personalizada para manejar excepciones
-public class ErrorResponse {
+public class ErrorResponse extends Throwable {
     private String message;
     private String stackTrace;
 

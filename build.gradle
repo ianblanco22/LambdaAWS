@@ -41,6 +41,7 @@ dependencies {
     implementation group: 'org.glassfish', name: 'jakarta.el', version: '4.0.2'
     implementation group: 'org.hibernate.validator', name: 'hibernate-validator', version: '8.0.1.Final'
 
+
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:32.1.1-jre'
 
@@ -53,7 +54,8 @@ dependencies {
     // Logs
     implementation group: 'com.amazonaws', name: 'aws-lambda-java-log4j2', version: '1.5.1'
     implementation group: 'com.guicedee.services', name: 'sl4j', version: '1.0.13.5'
-    implementation 'org.slf4j:slf4j-api:1.8.0-beta2'
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+    implementation 'org.slf4j:slf4j-simple:2.0.9'
 
     //MAP
     implementation 'org.mapstruct:mapstruct:1.6.0'
