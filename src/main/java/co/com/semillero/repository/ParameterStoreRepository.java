@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class ParameterStoreRepository {
     public ParameterStoreDTO getParameter(){
-        String path="/Semillero/Capacitacion-semillero/";
+        String path="/Semillero/capacitacion-semillero/";
         ParameterStoreDTO parameter=new ParameterStoreDTO();
 
         Map<String, String> parameterSemillero= ParameterStoreUtil.getParameters(path);
