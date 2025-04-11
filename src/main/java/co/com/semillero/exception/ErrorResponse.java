@@ -21,7 +21,7 @@ public class ErrorResponse extends Throwable {
         this.message = message;
     }
 
-    public StackTraceElement[] getStackTrace() {
+    public String getStackTraceAsString() {
         return stackTrace;
     }
 

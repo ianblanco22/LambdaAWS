@@ -12,11 +12,11 @@ import lombok.Setter;
 @DynamoDBDocument
 public class ClientEntity {
 
-    @DynamoDBRangeKey(attributeName = "id")
+    @DynamoDBHashKey(attributeName = "id")
     protected String id;
 
-    @DynamoDBHashKey(attributeName = "sdk")
-    protected String sdk;
+    @DynamoDBRangeKey(attributeName = "sk")
+    protected String sk;
 
     @DynamoDBAttribute(attributeName = "key")
     protected KeyEntity key;

@@ -34,7 +34,7 @@ public class ClientMapper {
         String id = keyEntity.getStrIdLlave();
         logger.info("ClientEntity - id: {}", id);
         clientEntity.setId(id);
-        clientEntity.setSdk(id);
+        clientEntity.setSk(id);
         logger.info("ClientEntity - strFirstName: {}", client.getStrFirstName());
         logger.info("ClientEntity - strLastName: {}", client.getStrLastName());
         logger.info("ClientEntity - strEmail: {}", client.getStrEmail());
