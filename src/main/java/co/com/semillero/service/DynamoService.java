@@ -14,6 +14,7 @@ public class DynamoService implements IDynamoService{
     public String saveClient(DynamoDBMapper mapper, Client entity) {
         ClientEntity client = clientMapper.clientMapper(entity);
         dynamoMapperRepository.save(mapper, client);
+        return "Se guardó correctamente. ";
     }
 
     @Override
