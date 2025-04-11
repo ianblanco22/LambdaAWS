@@ -1,5 +1,6 @@
 package co.com.semillero;
 
+import co.com.semillero.exception.ErrorResponse;
 import co.com.semillero.model.Client;
 import co.com.semillero.model.ParameterStoreDTO;
 import co.com.semillero.repository.DynamoRepository;
@@ -27,17 +28,19 @@ public class Handler implements RequestHandler<APIGatewayProxyRequestEvent, APIG
         try {
             return BuildResponseUtil.buildSuccess(redirect(apiGatewayProxyRequestEvent));
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            // Crear un objeto ErrorResponse y devolverlo como respuesta
+            ErrorResponse errorResponse = new ErrorResponse(e);
+            return BuildResponseUtil.buildError(errorResponse);
         }
     }
 
     public Object redirect(APIGatewayProxyRequestEvent input) throws Exception{
         try {
             if (input.getBody() != null){
-                if (input.getHeaders().get("servicio").equals("guardar") && input.getHttpMethod().equals(HttpMethod.POST)){
+                if (input.getHeaders().get("servicio").equals("guardar")){
                     Client client = (Client) Util.string2object(input.getBody(), Client.class);
                     return service.saveClient(dynamoDBMapper, client);
-                } else if (input.getHeaders().get("servicio").equals("consultar") && input.getHttpMethod().equals(HttpMethod.GET)){
+                } else if (input.getHeaders().get("servicio").equals("consultar")){
                     Client client = (Client) Util.string2object(input.getBody(), Client.class);
                     return service.getClient(dynamoDBMapper, client);
                 } else {

@@ -1,6 +1,7 @@
 package co.com.semillero.util;
 
 import co.com.semillero.constants.MessagesEnum;
+import co.com.semillero.exception.ErrorResponse;
 import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyResponseEvent;
 import lombok.extern.slf4j.Slf4j;
 
@@ -76,7 +77,7 @@ public class BuildResponseUtil {
      * @param ex
      * @return
      */
-    public static APIGatewayProxyResponseEvent buildError(Exception ex){
+    public static APIGatewayProxyResponseEvent buildError(ErrorResponse ex){
         ResponseDto responseDto = new ResponseDto();
         responseDto.setMessage(ex.getMessage());
        // responseDto.setStatusCode(ex.getErrorCode());

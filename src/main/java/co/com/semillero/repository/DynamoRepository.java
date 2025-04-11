@@ -5,6 +5,7 @@ import co.com.semillero.model.ParameterStoreDTO;
 import com.amazonaws.client.builder.AwsClientBuilder;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig;
 
@@ -23,7 +24,7 @@ public class DynamoRepository {
 
     //realiza la conexion a Dynamo de acuerdo a la url y region de la tabla
     public AmazonDynamoDB buidClient(String region, String url){
-        return AmazonDynamoDBClient.builder().withEndpointConfiguration(
+        return AmazonDynamoDBClientBuilder.standard().withEndpointConfiguration(
                 new AwsClientBuilder.EndpointConfiguration(url,region)).build();
     }
 }
