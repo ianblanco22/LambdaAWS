@@ -7,7 +7,7 @@ import co.com.semillero.model.entity.KeyEntity;
 
 public class ClientMapper {
 
-    public ClientEntity ClientMapper(Client client){
+    public ClientEntity clientMapper(Client client){
         ClientEntity clientEntity = new ClientEntity();
         AccountEntity accountEntity=new AccountEntity();
         KeyEntity keyEntity=new KeyEntity();
