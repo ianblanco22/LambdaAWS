@@ -18,11 +18,8 @@ public class ClientEntity {
     @DynamoDBHashKey(attributeName = "sdk")
     protected String sdk;
 
-    @DynamoDBAttribute(attributeName = "strIdLlave")
-    protected KeyEntity strIdLlave;
-
-    @DynamoDBAttribute(attributeName = "strTypeLlave")
-    protected KeyEntity strTypeLlave;
+    @DynamoDBAttribute(attributeName = "key")
+    protected KeyEntity key;
 
     @DynamoDBAttribute(attributeName = "numID")
     protected int numID;
@@ -48,9 +45,7 @@ public class ClientEntity {
     @DynamoDBAttribute(attributeName = "strEmail")
     protected String strEmail;
 
-    @DynamoDBAttribute(attributeName = "strAccount")
-    protected AccountEntity strAccount;
+    @DynamoDBAttribute(attributeName = "account")
+    protected AccountEntity account;
 
-    @DynamoDBAttribute(attributeName = "strBank")
-    protected AccountEntity strBank;
 }

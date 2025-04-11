@@ -17,4 +17,6 @@ public class Client {
     protected String strEmail;
     protected String strAccount;
     protected String strBank;
+    protected String strIdLlave;
+    protected String strTypeLlave;
 }
