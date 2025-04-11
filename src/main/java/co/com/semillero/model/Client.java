@@ -1,5 +1,7 @@
 package co.com.semillero.model;
 
+import co.com.semillero.model.entity.AccountEntity;
+import co.com.semillero.model.entity.KeyEntity;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,8 +17,6 @@ public class Client {
     protected String strAddress;
     protected String strPhoneNumber;
     protected String strEmail;
-    protected String strAccount;
-    protected String strBank;
-    protected String strIdLlave;
-    protected String strTypeLlave;
+    protected KeyEntity key;
+    protected AccountEntity account;
 }

@@ -27,12 +27,10 @@ public class DynamoService implements IDynamoService {
     @Override
     public ClientEntity getClient(DynamoDBMapper mapper, Client entity) {
         logger.info("Iniciando el método getClient.");
-        String id = entity.getStrIdLlave();
+        String id = entity.getKey().getStrIdLlave();
         logger.info("Obteniendo cliente con ID: " + id);
         ClientEntity response = dynamoMapperRepository.load(mapper, id);
         logger.info("Cliente obtenido correctamente.");
         return response;
     }
-
-
 }

@@ -15,6 +15,6 @@ public class DynamoMapperRepository {
     }
 
     public ClientEntity load (DynamoDBMapper mapper, String id) {
-        return mapper.load(ClientEntity.class, id);
+        return mapper.load(ClientEntity.class, id, id);
     }
 }
