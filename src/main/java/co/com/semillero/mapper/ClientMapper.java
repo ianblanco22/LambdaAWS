@@ -19,19 +19,19 @@ public class ClientMapper {
         logger.info("Mapping Client to ClientEntity...");
 
         // Log de AccountEntity
-        logger.info("AccountEntity - strAccount: {}", client.getStrAccount());
-        logger.info("AccountEntity - strBank: {}", client.getStrBank());
-        accountEntity.setStrAccount(client.getStrAccount());
-        accountEntity.setStrBank(client.getStrBank());
+        logger.info("AccountEntity - strAccount: {}", client.getAccount().getStrAccount());
+        logger.info("AccountEntity - strBank: {}", client.getAccount().getStrBank()));
+        accountEntity.setStrAccount(client.getAccount().getStrAccount());
+        accountEntity.setStrBank(client.getAccount().getStrBank());
 
         // Log de KeyEntity
-        logger.info("KeyEntity - strIdLlave: {}", client.getStrIdLlave());
-        logger.info("KeyEntity - strTypeLlave: {}", client.getStrTypeLlave());
-        keyEntity.setStrIdLlave(client.getStrIdLlave());
-        keyEntity.setStrTypeLlave(client.getStrTypeLlave());
+        logger.info("KeyEntity - strIdLlave: {}", client.getKey().getStrIdLlave());
+        logger.info("KeyEntity - strTypeLlave: {}", client.getKey().getStrTypeLlave());
+        keyEntity.setStrIdLlave(client.getKey().getStrIdLlave());
+        keyEntity.setStrTypeLlave( client.getKey().getStrTypeLlave());
 
         // Log de ClientEntity
-        String id = keyEntity.getStrIdLlave();
+        String id = client.getStrIdentificationType()+"_"+ keyEntity.getStrIdLlave();
         logger.info("ClientEntity - id: {}", id);
         clientEntity.setId(id);
         clientEntity.setSk(id);
