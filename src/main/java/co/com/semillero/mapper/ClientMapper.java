@@ -20,7 +20,7 @@ public class ClientMapper {
 
         // Log de AccountEntity
         logger.info("AccountEntity - strAccount: {}", client.getAccount().getStrAccount());
-        logger.info("AccountEntity - strBank: {}", client.getAccount().getStrBank()));
+        logger.info("AccountEntity - strBank: {}", client.getAccount().getStrBank());
         accountEntity.setStrAccount(client.getAccount().getStrAccount());
         accountEntity.setStrBank(client.getAccount().getStrBank());
 
