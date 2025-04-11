@@ -31,7 +31,7 @@ public class ClientMapper {
         keyEntity.setStrTypeLlave( client.getKey().getStrTypeLlave());
 
         // Log de ClientEntity
-        String id = client.getStrIdentificationType()+"_"+ keyEntity.getStrIdLlave();
+        String id = client.getKey().getStrTypeLlave()+"_"+ keyEntity.getStrIdLlave();
         logger.info("ClientEntity - id: {}", id);
         clientEntity.setId(id);
         clientEntity.setSk(id);
